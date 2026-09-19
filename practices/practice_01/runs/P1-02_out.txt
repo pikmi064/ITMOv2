@@ -1,0 +1,28 @@
+{
+  "summary": "PR добавляет метод ReviewService.review() и эндпоинт POST /api/reviews, которые отправляют diff во внешний LLM напрямую, без удаления секретов, без проверки длины diff и без таймаута/обработки ошибок вызова LLM.",
+  "risks": [
+    {
+      "file": "app/review_service.py",
+      "line": "14",
+      "evidence": "prompt = f\"Review this pull request and find problems:\\n{diff}\" — diff подставляется в prompt целиком, без какой-либо очистки от секретов; нарушает SEC-1",
+      "risk": "Если diff содержит токен, пароль или приватный ключ, они попадут в prompt и уйдут во внешний LLM-провайдер"
+    },
+    {
+      "file": "app/api.py",
+      "line": "8-10",
+      "evidence": "def create_review(payload: dict) -> dict[str, str]: return review_service.review(payload[\"diff\"]) — вызов review_service.review без try/except; в review_service.py:15 answer = self.llm.generate(prompt) вызывается без указания timeout; нарушает REL-1",
+      "risk": "Зависший или упавший вызов LLM приведёт к голому HTTP 500 (или зависшему запросу) вместо контролируемого ответа"
+    },
+    {
+      "file": "app/api.py",
+      "line": "8-10",
+      "evidence": "def create_review(payload: dict) -> dict[str, str]: — перед вызовом review_service.review(payload[\"diff\"]) нет проверки длины payload[\"diff\"]; нарушает API-1",
+      "risk": "Diff длиннее 20 000 символов не будет отклонён с HTTP 413 и будет обработан как обычный запрос, увеличивая стоимость и задержку вызова LLM"
+    }
+  ],
+  "checks": [
+    "Вызвать ReviewService.review() с diff, содержащим тестовый секрет (например, AWS_SECRET_KEY=AKIA...), и проверить строку prompt, переданную в llm.generate: секрет остаётся нередактированным вместо [REDACTED]",
+    "Подменить llm.generate на mock, который бросает исключение или не отвечает дольше 10 секунд, вызвать POST /api/reviews и убедиться, что таймаут не настроен и клиент получает голый 500 вместо контролируемого ответа",
+    "Отправить POST /api/reviews с payload[\"diff\"] длиной больше 20000 символов и убедиться, что запрос не отклоняется с HTTP 413, а обрабатывается как обычный"
+  ]
+}
