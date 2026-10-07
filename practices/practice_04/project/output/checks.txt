@@ -1,0 +1,15 @@
+PASS: Python syntax
+PASS: JavaScript syntax
+test_invalid_days (test_project.DeadlineTests.test_invalid_days) ... ok
+test_missing_database_is_not_created (test_project.DeadlineTests.test_missing_database_is_not_created) ... ok
+test_query_does_not_modify_database (test_project.DeadlineTests.test_query_does_not_modify_database) ... ok
+test_window_excludes_completed_unscheduled_and_later_tasks (test_project.DeadlineTests.test_window_excludes_completed_unscheduled_and_later_tasks) ... ok
+test_zero_includes_today_and_overdue (test_project.DeadlineTests.test_zero_includes_today_and_overdue) ... ok
+test_bad_input (test_project.InputTests.test_bad_input) ... ok
+test_trim_and_validate (test_project.InputTests.test_trim_and_validate) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.005s
+
+OK
+PASS: all checks

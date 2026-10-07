@@ -1,0 +1,56 @@
+{
+  "time": "2026-10-07T20:27:55.027425+00:00",
+  "credential_scan": {
+    "files_scanned": 60,
+    "pattern_matches": [],
+    "scope": "three credential-like patterns; not a guarantee of absence of all secrets"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "--",
+        "practices/practice_03"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "practice_04\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS",
+  "staged_file_count": 58,
+  "staged_paths_outside_practice_04": []
+}

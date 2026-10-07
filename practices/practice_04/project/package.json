@@ -1,0 +1,6 @@
+{
+  "name": "after-class",
+  "private": true,
+  "type": "module",
+  "scripts": {"check": "python3 scripts/check.py"}
+}

@@ -1,0 +1,107 @@
+{
+  "time": "2026-10-07T19:41:34.757494+00:00",
+  "transport": "stdio",
+  "data": "temporary fixture, not user tasks",
+  "server": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "after-class",
+      "title": null,
+      "version": "1.30.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools": {
+    "meta": null,
+    "nextCursor": null,
+    "tools": [
+      {
+        "name": "get_deadlines",
+        "title": null,
+        "description": "Read unfinished overdue tasks and upcoming deadlines from the study tracker.\n\ndays is an integer from 0 to 365. The upcoming interval includes today\nthrough today + days, inclusive; 0 means today only. Overdue tasks are\nalways included. Completed tasks and tasks without a deadline are excluded.\nUses the computer's local date and opens SQLite read-only.\n",
+        "inputSchema": {
+          "properties": {
+            "days": {
+              "default": 7,
+              "maximum": 365,
+              "minimum": 0,
+              "title": "Days",
+              "type": "integer"
+            }
+          },
+          "title": "get_deadlinesArguments",
+          "type": "object"
+        },
+        "outputSchema": null,
+        "icons": null,
+        "annotations": null,
+        "meta": null,
+        "execution": null
+      }
+    ]
+  },
+  "calls": [
+    {
+      "arguments": {
+        "days": 7
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"today\": \"2026-10-07\",\n  \"through\": \"2026-10-14\",\n  \"overdue\": [\n    {\n      \"id\": 2,\n      \"title\": \"Разобрать конспект\",\n      \"subject\": \"Математика\",\n      \"deadline\": \"2026-10-06\",\n      \"days_until_deadline\": -1\n    }\n  ],\n  \"upcoming\": [\n    {\n      \"id\": 1,\n      \"title\": \"Сдать практику 4\",\n      \"subject\": \"AI-инструменты\",\n      \"deadline\": \"2026-10-09\",\n      \"days_until_deadline\": 2\n    }\n  ],\n  \"counts\": {\n    \"overdue\": 1,\n    \"upcoming\": 1\n  }\n}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "arguments": {
+        "days": -1
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Error executing tool get_deadlines: 1 validation error for get_deadlinesArguments\ndays\n  Input should be greater than or equal to 0 [type=greater_than_equal, input_value=-1, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.13/v/greater_than_equal"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "arguments": {
+        "days": "7"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Error executing tool get_deadlines: 1 validation error for get_deadlinesArguments\ndays\n  Input should be a valid integer [type=int_type, input_value='7', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_type"
+          }
+        ],
+        "isError": true
+      }
+    }
+  ],
+  "assertions": "PASS"
+}
