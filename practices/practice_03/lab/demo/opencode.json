@@ -2,12 +2,20 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "ollama/itmo-agent",
   "small_model": "ollama/itmo-agent",
+  "enabled_providers": [
+    "ollama"
+  ],
+  "share": "disabled",
+  "autoupdate": false,
+  "snapshot": false,
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama local",
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+        "baseURL": "http://localhost:11434/v1",
+        "timeout": 600000,
+        "chunkTimeout": 300000
       },
       "models": {
         "itmo-agent": {
@@ -31,8 +39,8 @@
         "read": "allow",
         "glob": "allow",
         "grep": "allow"
-      }
+      },
+      "temperature": 0.2
     }
   }
 }
-
