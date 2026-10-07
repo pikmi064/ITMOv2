@@ -1,0 +1,134 @@
+# ReAct-проверка ссылок file:line в tests_load.md против TRAINING_PR.diff
+
+Сначала восстановлю итоговую (postimage) нумерацию строк для двух файлов из diff, чтобы дальше можно было честно читать конкретные строки, а не гадать.
+
+**app/api.py (после применения diff):**
+```
+1  from fastapi import FastAPI
+2
+3  from app.dependencies import review_service
+4
+5  app = FastAPI()
+6
+7
+8  @app.post("/api/reviews")
+9  def create_review(payload: dict) -> dict[str, str]:
+10     return review_service.review(payload["diff"])
+11
+12
+13 @app.get("/health")
+14 def health() -> dict[str, str]:
+15     return {"status": "ok"}
+```
+
+**app/review_service.py (после применения diff):**
+```
+1  from typing import Protocol
+2
+3
+4  class LLM(Protocol):
+5      def generate(self, prompt: str) -> str:
+6          ...
+7
+8
+9  class ReviewService:
+10     def __init__(self, llm: LLM) -> None:
+11         self.llm = llm
+12
+13     def review(self, diff: str) -> dict[str, str]:
+14         prompt = f"Review this pull request and find problems:\n{diff}"
+15         answer = self.llm.generate(prompt)
+16         return {"comment": answer}
+```
+
+---
+
+## Шаг 1
+**Thought:** Первая ссылка — строка 3 tests_load.md: «Правило `API-1` (`len(diff)` в `app/api.py:8-10`) синхронное и без состояния». Утверждение: строки 8-10 содержат проверку `len(diff)`.
+**Action:** grep_diff("len(diff)")
+**Observation:** По всему тексту TRAINING_PR.diff паттерн `len(diff)` не встречается ни разу — ни в api.py, ни в review_service.py. Никакой проверки длины diff в этом diff нет вообще.
+
+## Шаг 2
+**Action:** read_diff_line(app/api.py:8-10)
+**Observation:**
+```
+8  @app.post("/api/reviews")
+9  def create_review(payload: dict) -> dict[str, str]:
+10     return review_service.review(payload["diff"])
+```
+Это обработчик POST-эндпоинта, который передаёт `payload["diff"]` напрямую в `review_service.review()` — без какой-либо проверки длины.
+
+## Шаг 3
+**Action:** compare(app/api.py:8-10, "len(diff)")
+**Observation:** Несовпадение. Строки 8-10 реализуют вызов эндпоинта, но не содержат `len(diff)` и не содержат никакой валидации размера входа.
+
+## Шаг 4
+**Action:** conclude("app/api.py:8-10 в контексте API-1/len(diff)")
+**Observation/Вердикт:** **неверная строка** — правило `API-1` (лимит 20 000 символов, HTTP 413) в этом diff не реализовано вообще ни в одной строке; строки 8-10 показывают только факт синхронного вызова `review_service.review()`, но не факт наличия проверки длины. Формулировка в тексте («`len(diff)` в `app/api.py:8-10`») подразумевает, что там есть такой код — это не подтверждается diff.
+
+---
+
+## Шаг 5
+**Thought:** Вторая ссылка — строка 8 tests_load.md: «`app/review_service.py:15` без timeout/`try except`». Утверждение: строка 15 — вызов LLM без обработки ошибок/таймаута.
+**Action:** read_diff_line(app/review_service.py:15)
+**Observation:**
+```
+15         answer = self.llm.generate(prompt)
+```
+
+## Шаг 6
+**Action:** compare(app/review_service.py:15, "вызов LLM без timeout/try except")
+**Observation:** Совпадает. Это прямой синхронный вызов `self.llm.generate(prompt)`, действительно без `try/except` вокруг него и без каких-либо признаков timeout (ни decorator, ни `asyncio.wait_for`, ни параметра timeout).
+
+## Шаг 7
+**Action:** conclude("app/review_service.py:15, первое упоминание")
+**Observation/Вердикт:** **подтверждено**.
+
+---
+
+## Шаг 8
+**Thought:** Третья ссылка (повторно, строка 16 tests_load.md, в разделе «Как использовали AI»): «риск ... уже существует в diff (`review_service.py:15`)» — то же утверждение, тот же файл.
+**Action:** compare(app/review_service.py:15, тот же контент, что в шаге 6)
+**Observation:** Строка не изменилась между двумя упоминаниями, содержимое то же самое — `answer = self.llm.generate(prompt)`.
+
+## Шаг 9
+**Action:** conclude("app/review_service.py:15, второе упоминание")
+**Observation/Вердикт:** **подтверждено** (согласуется с шагом 7, повторная ссылка на ту же корректную строку).
+
+---
+
+## Шаг 10
+**Thought:** Четвёртая ссылка — строка 16 tests_load.md: «singleton `review_service`, `app/api.py:3`/`app/api.py:8-10`». Утверждение: строка 3 показывает, что `review_service` — общий (singleton) экземпляр.
+**Action:** read_diff_line(app/api.py:3)
+**Observation:**
+```
+3  from app.dependencies import review_service
+```
+Это импорт объекта `review_service` из модуля `app.dependencies` на уровне модуля, а не создание нового экземпляра внутри функции-хендлера.
+
+## Шаг 11
+**Action:** compare(app/api.py:3, "singleton review_service")
+**Observation:** Частично подтверждает: импорт на уровне модуля — необходимое, но не достаточное условие singleton-паттерна. Сама фабрика/определение `review_service` (реализация в `app/dependencies.py`) в diff не показана — TRAINING_PR.diff вообще не содержит файла `app/dependencies.py`. То есть строка 3 подтверждает «используется общий импортированный объект, а не создаётся новый на каждый запрос», но не доказывает строго, что это именно singleton (могла быть и per-request фабрика с тем же именем импорта — этого не видно).
+
+## Шаг 12
+**Action:** conclude("app/api.py:3 и повторное app/api.py:8-10 как evidence для singleton review_service")
+**Observation/Вердикт:** **неоднозначно, нужен человек** — для `app/api.py:8-10` в этом контексте (не как «len(diff)», а как «использование общего review_service в хендлере без per-request инстанцирования») строки читаются верно и содержательно поддерживают вывод о разделяемом состоянии. Но `app/api.py:3` сам по себе показывает только факт импорта, а не факт единственности экземпляра — определение singleton физически находится в `app/dependencies.py`, которого нет в этом diff. Формально ссылка указывает на реально существующую строку с релевантным содержанием, но доказательная сила утверждения «singleton» опирается на файл за пределами diff — это нужно either дополнить ссылкой на `app/dependencies.py` (если он появится в следующем инкременте), либо явно отметить как предположение, а не факт, подтверждённый diff.
+
+---
+
+## Итоговая таблица
+
+| Ссылка | Утверждение в tests_load.md | Реальное содержимое строки | Вердикт |
+|---|---|---|---|
+| `app/api.py:8-10` (стр. 3, контекст `API-1`) | Здесь находится проверка `len(diff)` | `@app.post(...)` / `def create_review(...)` / `return review_service.review(payload["diff"])` — вызов эндпоинта без проверки длины | **Неверная строка** — такой проверки нигде в diff нет |
+| `app/review_service.py:15` (стр. 8, первое упоминание) | Вызов LLM без timeout/try-except | `answer = self.llm.generate(prompt)` | **Подтверждено** |
+| `app/review_service.py:15` (стр. 16, повторное упоминание) | Тот же риск, та же строка | `answer = self.llm.generate(prompt)` | **Подтверждено** |
+| `app/api.py:3` (стр. 16, evidence singleton) | Показывает, что `review_service` — singleton | `from app.dependencies import review_service` — импорт общего объекта, но фабрика/определение вне diff | **Неоднозначно, нужен человек** |
+| `app/api.py:8-10` (стр. 16, evidence singleton) | Показывает использование общего `review_service` в хендлере | `return review_service.review(payload["diff"])` — использует импортированный объект напрямую, без per-request создания | **Подтверждено** (в этом контексте, отдельно от «len(diff)») |
+
+## Что осталось непроверенным / для человека
+
+- **`app/api.py:8-10` имеет два разных смысловых использования в одном файле** (ошибочное — про `len(diff)`, и корректное — про singleton-usage). Это сам по себе риск читаемости документа: одна и та же ссылка `file:line` в разных местах текста утверждает разные вещи, и одно из утверждений ложно. Нужно решение человека: либо убрать/исправить фразу про `len(diff)` в строке 3 tests_load.md (там нет такого кода — рекомендую явно написать «в diff нет реализации API-1, лимит проверяется гипотетически»), либо, если `len(diff)` планировался в другом файле — указать правильный файл.
+- **`app/api.py:3` как доказательство singleton** — формально ссылка валидна (строка существует, содержит импорт), но её интерпретация как «доказательство singleton» опирается на код `app/dependencies.py`, отсутствующий в этом diff. Решение о том, достаточно ли этого для отклонённого сценария SEC-1 (о чём сам файл говорит в разделе «Как использовали AI» — сценарий отклонён именно по этой причине), — уже принято автором документа корректно, но саму формулировку evidence можно уточнить, чтобы не создавать впечатление, будто diff доказывает singleton однозначно.
+
+Все 4 уникальные ссылки (с учётом повторов — 5 упоминаний) пройдены за 12 шагов, лимит не превышен.
