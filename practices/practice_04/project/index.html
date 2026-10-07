@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>После пары · Учебные задачи</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root{font-family:system-ui,-apple-system,sans-serif;color:#24332e;background:#f5f5ee;font-size:16px}
+    *{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:wait}
+    main{max-width:960px;margin:0 auto;padding:52px 24px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:36px}
+    .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#6a786e}h1{font-size:42px;letter-spacing:-2px;margin:8px 0}p{line-height:1.5;color:#6a786e}.date{font-size:14px;color:#6a786e}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}.stat{background:#e9ede2;border-radius:16px;padding:20px}.stat strong{display:block;font-size:32px;margin-bottom:4px}.stat span{font-size:14px;color:#55655b}
+    .panel{background:white;border:1px solid #e1e5db;border-radius:20px;padding:24px;margin-bottom:24px}h2{font-size:18px;margin:0 0 18px}
+    form{display:grid;grid-template-columns:2fr 1.3fr 1.1fr auto;gap:12px;align-items:end}label{font-size:12px;color:#647269;display:block}input{width:100%;border:1px solid #d7dfd2;border-radius:9px;padding:11px;margin-top:6px;background:#fcfcf8;color:#24332e;min-width:0}
+    input:focus{outline:2px solid #608469;outline-offset:2px}.primary{border:0;background:#315b43;color:white;border-radius:9px;padding:12px 18px}
+    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.filters{display:flex;gap:6px;flex-wrap:wrap}.filter{border:0;background:transparent;color:#657469;padding:9px 12px;border-radius:8px;font-size:14px}.filter.active{background:#315b43;color:white}.search{width:220px;margin:0}
+    ul{list-style:none;padding:0;margin:0}.task{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid #edf0e8}.check{width:23px;height:23px;flex-shrink:0;accent-color:#315b43;margin:0}.details{flex:1;min-width:0}.title{font-weight:600;overflow-wrap:anywhere}.done .title{text-decoration:line-through;color:#8a968c}.meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#718074;margin-top:7px}.late{color:#a24e34;background:#fff0e8;padding:2px 6px;border-radius:4px}.delete{border:0;background:transparent;color:#869184;padding:8px;font-size:13px}.delete:hover{color:#a24e34}
+    .empty{text-align:center;padding:40px 16px;color:#718074}.empty strong{display:block;color:#465b4c;margin-bottom:8px}.error{color:#a24e34;font-size:14px;margin:12px 0 0}footer{font-size:12px;color:#879181;text-align:center}
+    @media(max-width:720px){main{padding:28px 16px}header{align-items:start}.date{display:none}h1{font-size:36px}form{grid-template-columns:1fr 1fr}form label:first-child{grid-column:1/-1}.toolbar{align-items:stretch;flex-direction:column}.search{width:100%}.panel{padding:18px}.stat{padding:16px 12px}.stat strong{font-size:26px}.stat span{font-size:12px}}
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="eyebrow">Меньше держать в голове</div><h1>После пары</h1><p>Учебные задачи, которые хочется закрыть.</p></div><div class="date" id="today"></div></header>
+  <section class="stats" aria-label="Сводка"><div class="stat"><strong id="open">—</strong><span>В работе</span></div><div class="stat"><strong id="late">—</strong><span>Срок прошёл</span></div><div class="stat"><strong id="done">—</strong><span>Уже готово</span></div></section>
+  <section class="panel"><h2>Что нужно сделать?</h2><form id="form"><label>Задача<input name="title" placeholder="Например, сдать практику 4" maxlength="160" required></label><label>Предмет<input name="subject" placeholder="AI-инструменты" maxlength="80"></label><label>Срок<input name="deadline" type="date"></label><button class="primary" type="submit">Добавить</button></form></section>
+  <section class="panel"><div class="toolbar"><div class="filters" aria-label="Фильтры"><button class="filter active" data-filter="all" aria-pressed="true">Все</button><button class="filter" data-filter="open" aria-pressed="false">В работе</button><button class="filter" data-filter="late" aria-pressed="false">Просрочены</button><button class="filter" data-filter="done" aria-pressed="false">Готово</button></div><input class="search" id="search" placeholder="Найти задачу…" aria-label="Поиск задач"></div><div class="error" id="error" role="alert" hidden></div><ul id="tasks" aria-label="Учебные задачи"><li class="empty">Загружаем задачи…</li></ul></section>
+  <footer>Хранится на твоём компьютере · Практика 4</footer>
+</main>
+<script>
+  let tasks = [], filter = 'all';
+  const el = id => document.getElementById(id);
+  const localDate = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+  const overdue = task => !task.done && task.deadline && task.deadline < localDate();
+  const formatDate = value => new Date(value+'T00:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short',year:'numeric'});
+  el('today').textContent = new Date().toLocaleDateString('ru-RU',{day:'numeric',month:'long',weekday:'long'});
+  function showError(message='') { el('error').textContent=message; el('error').hidden=!message; }
+  async function api(path='', options={}) {
+    const response = await fetch('/api/tasks'+path, {headers:{'Content-Type':'application/json'},...options});
+    const data = await response.json();
+    if(!response.ok) throw new Error(data.error || 'Не удалось выполнить действие');
+    return data;
+  }
+  async function reload() { tasks=await api(); render(); }
+  function render() {
+    el('open').textContent=tasks.filter(t=>!t.done).length;
+    el('late').textContent=tasks.filter(overdue).length;
+    el('done').textContent=tasks.filter(t=>t.done).length;
+    const query=el('search').value.trim().toLocaleLowerCase('ru');
+    const visible=tasks.filter(t=>(filter==='all'||(filter==='open'&&!t.done)||(filter==='done'&&t.done)||(filter==='late'&&overdue(t)))&&(`${t.title} ${t.subject}`).toLocaleLowerCase('ru').includes(query));
+    el('tasks').replaceChildren();
+    if(!visible.length){const li=document.createElement('li');li.className='empty';const title=document.createElement('strong');title.textContent=tasks.length?'Здесь пока пусто':'Начнём с одной задачи';li.append(title,document.createTextNode(tasks.length?'Попробуй другой фильтр или поиск.':'Добавь задачу в форме выше.'));el('tasks').append(li);return;}
+    for(const task of visible){
+      const li=document.createElement('li');li.className='task'+(task.done?' done':'');
+      const check=document.createElement('input');check.type='checkbox';check.className='check';check.checked=!!task.done;check.setAttribute('aria-label',`Выполнено: ${task.title}`);
+      check.addEventListener('change',async()=>{check.disabled=true;showError();try{await api('/'+task.id,{method:'PATCH',body:JSON.stringify({done:check.checked})});await reload();}catch(e){check.checked=!!task.done;showError(e.message);}finally{check.disabled=false;}});
+      const details=document.createElement('div');details.className='details';const title=document.createElement('div');title.className='title';title.textContent=task.title;details.append(title);
+      const meta=document.createElement('div');meta.className='meta';
+      if(task.subject){const subject=document.createElement('span');subject.textContent=task.subject;meta.append(subject);}
+      if(task.deadline){const deadline=document.createElement('span');deadline.textContent=(overdue(task)?'Просрочено · ':'До ')+formatDate(task.deadline);if(overdue(task))deadline.className='late';meta.append(deadline);}details.append(meta);
+      const remove=document.createElement('button');remove.className='delete';remove.textContent='Удалить';remove.setAttribute('aria-label',`Удалить: ${task.title}`);
+      remove.addEventListener('click',async()=>{if(!confirm(`Удалить «${task.title}»?`))return;remove.disabled=true;showError();try{await api('/'+task.id,{method:'DELETE'});await reload();}catch(e){showError(e.message);}finally{remove.disabled=false;}});
+      li.append(check,details,remove);el('tasks').append(li);
+    }
+  }
+  el('form').addEventListener('submit',async event=>{event.preventDefault();const button=event.currentTarget.querySelector('button');button.disabled=true;showError();try{const data=Object.fromEntries(new FormData(el('form')));await api('',{method:'POST',body:JSON.stringify(data)});el('form').reset();await reload();el('form').elements.title.focus();}catch(e){showError(e.message);}finally{button.disabled=false;}});
+  document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('.filter').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});render();}));
+  el('search').addEventListener('input',render);
+  reload().catch(e=>{el('tasks').replaceChildren();showError('Не удалось загрузить задачи: '+e.message);});
+</script>
+</body>
+</html>
