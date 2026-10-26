@@ -1,4 +1,7 @@
+# Профиль для OpenCode: большой контекст под длинный prompt агента и результаты чтения файлов.
+# SYSTEM здесь НЕ задан намеренно: инструкции приходят от агента (demo/repo-system.txt).
 FROM qwen3.5:4b
+# 65536 токенов: на M4/16 GB занимает около 6 GB (проверено через ollama ps), 100% GPU.
 PARAMETER num_ctx 65536
 PARAMETER temperature 0.2
-
+PARAMETER seed 42
