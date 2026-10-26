@@ -1,0 +1,52 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: Меньше держать в голове
+      - heading "После пары" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Учебные задачи, которые хочется закрыть.
+    - generic [ref=e8]: среда, 7 октября
+  - region "Сводка" [ref=e9]:
+    - generic [ref=e10]:
+      - strong [ref=e11]: "0"
+      - text: В работе
+    - generic [ref=e12]:
+      - strong [ref=e13]: "0"
+      - text: Срок прошёл
+    - generic [ref=e14]:
+      - strong [ref=e15]: "1"
+      - text: Уже готово
+  - generic [ref=e16]:
+    - heading "Что нужно сделать?" [level=2] [ref=e17]
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - text: Задача
+        - textbox "Задача" [ref=e20]:
+          - /placeholder: Например, сдать практику 4
+      - generic [ref=e21]:
+        - text: Предмет
+        - textbox "Предмет" [ref=e22]:
+          - /placeholder: AI-инструменты
+      - generic [ref=e23]:
+        - text: Срок
+        - textbox "Срок" [ref=e24]
+      - button "Добавить" [ref=e25] [cursor=pointer]
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic "Фильтры" [ref=e28]:
+        - button "Все" [ref=e29] [cursor=pointer]
+        - button "В работе" [ref=e30] [cursor=pointer]
+        - button "Просрочены" [ref=e31] [cursor=pointer]
+        - button "Готово" [active] [pressed] [ref=e32] [cursor=pointer]
+      - textbox "Поиск задач" [ref=e33]:
+        - /placeholder: Найти задачу…
+        - text: Проверка Playwright
+    - list "Учебные задачи" [ref=e34]:
+      - listitem [ref=e54]:
+        - 'checkbox "Выполнено: Проверка Playwright — практика 4" [checked] [ref=e55]'
+        - generic [ref=e56]:
+          - generic [ref=e57]: Проверка Playwright — практика 4
+          - generic [ref=e58]:
+            - generic [ref=e59]: AI-инструменты
+            - generic [ref=e60]: До 1 янв. 2000 г.
+        - 'button "Удалить: Проверка Playwright — практика 4" [ref=e61] [cursor=pointer]': Удалить
+  - generic [ref=e37]: Хранится на твоём компьютере · Практика 4

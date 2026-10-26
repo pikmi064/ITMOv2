@@ -1,0 +1,506 @@
+{
+  "time": "2026-10-07T20:29:30.436118+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "MCP success and both invalid inputs",
+      "status": "PASS"
+    },
+    {
+      "check": "Hook handler PASS, FAIL, and skipped read",
+      "status": "PASS"
+    },
+    {
+      "check": "Context7 resolve and docs returned content",
+      "status": "PASS"
+    },
+    {
+      "check": "Agent read rules",
+      "status": "PASS"
+    },
+    {
+      "check": "Agent loaded both skills",
+      "status": "PASS"
+    },
+    {
+      "check": "Agent invoked MCP success and invalid input",
+      "status": "PASS"
+    },
+    {
+      "check": "Successful Sonnet OpenCode session",
+      "status": "PASS"
+    },
+    {
+      "check": "Real edit received AUTO CHECK PASS",
+      "status": "PASS"
+    },
+    {
+      "check": "Hook log matches actual tool callID",
+      "status": "PASS"
+    },
+    {
+      "check": "Agent acknowledged automatic checks",
+      "status": "PASS"
+    },
+    {
+      "check": "Runner reported seven passing tests",
+      "status": "PASS"
+    },
+    {
+      "check": "Browser snapshots: created, completed, reloaded, cleaned",
+      "status": "PASS"
+    },
+    {
+      "check": "All local document link targets exist",
+      "status": "PASS"
+    }
+  ],
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "project/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "project/EVIDENCE.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "project/DEMO.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "project/SKILLS_REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "reflection.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "project/REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "project/output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "DEMO.md",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "SKILLS_REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "EVIDENCE.md",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/checks.txt",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/playwright/02-completed-filter.yml",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/playwright/completed-task.png",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "EVIDENCE.md#браузерная-проверка-playwright",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/mcp-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/context7-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/hook-handler-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/README.md",
+      "target": "output/hooks.jsonl",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-skills.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "SKILLS_REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "DEMO.md",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "mcp_server.py",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "deadlines.py",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/mcp-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/mcp-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/context7-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/hook-handler-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/hooks.jsonl",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "../reflection.md",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/checks.txt",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/playwright/01-created.yml",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/playwright/02-completed-filter.yml",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/playwright/03-reloaded.yml",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/playwright/completed-task.png",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/playwright/04-cleaned.txt",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "DEMO.md",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/mcp-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/hook-handler-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/hooks.jsonl",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-mcp-status.txt",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/context7-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-cloud-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-hook-demo-2026-10-07T19-53-46.725312_00-00.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-hook-demo-2026-10-07T20-14-04.810299_00-00.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/hooks.jsonl",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/document-links.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/evidence-audit.json",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "project/EVIDENCE.md",
+      "target": "output/submission-audit.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "EVIDENCE.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": ".agents/skills/playwright/SKILL.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": ".agents/skills/context7-mcp/SKILL.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "opencode.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "mcp_server.py",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "deadlines.py",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": ".opencode/plugins/check.js",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "scripts/check.py",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "tests/test_project.py",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/mcp-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-skills.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/playwright/01-created.yml",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/playwright/02-completed-filter.yml",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/playwright/03-reloaded.yml",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/playwright/completed-task.png",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/context7-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "SKILLS_REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/hook-handler-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-cloud-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "../reflection.md",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-hook-demo-2026-10-07T19-53-46.725312_00-00.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-hook-demo-2026-10-07T20-14-04.810299_00-00.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/opencode-hook-demo.json",
+      "exists": true
+    },
+    {
+      "source": "project/DEMO.md",
+      "target": "output/hooks.jsonl",
+      "exists": true
+    },
+    {
+      "source": "reflection.md",
+      "target": "project/EVIDENCE.md",
+      "exists": true
+    },
+    {
+      "source": "reflection.md",
+      "target": "project/DEMO.md",
+      "exists": true
+    }
+  ],
+  "scope": "saved evidence and file links; not a new browser/model run"
+}
