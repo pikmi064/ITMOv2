@@ -1,0 +1,9 @@
+┌  MCP Servers
+│
+●  ✓ study_tracker [90mconnected
+│      [90m.venv/bin/python mcp_server.py
+│
+●  ✓ context7 [90mconnected
+│      [90mhttps://mcp.context7.com/mcp
+│
+└  2 server(s)

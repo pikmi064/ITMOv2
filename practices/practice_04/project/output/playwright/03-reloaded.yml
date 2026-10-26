@@ -1,0 +1,51 @@
+- main [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]: Меньше держать в голове
+      - heading "После пары" [level=1] [ref=f1e6]
+      - paragraph [ref=f1e7]: Учебные задачи, которые хочется закрыть.
+    - generic [ref=f1e8]: среда, 7 октября
+  - region "Сводка" [ref=f1e9]:
+    - generic [ref=f1e10]:
+      - strong [ref=f1e11]: "0"
+      - text: В работе
+    - generic [ref=f1e12]:
+      - strong [ref=f1e13]: "0"
+      - text: Срок прошёл
+    - generic [ref=f1e14]:
+      - strong [ref=f1e15]: "1"
+      - text: Уже готово
+  - generic [ref=f1e16]:
+    - heading "Что нужно сделать?" [level=2] [ref=f1e17]
+    - generic [ref=f1e18]:
+      - generic [ref=f1e19]:
+        - text: Задача
+        - textbox "Задача" [ref=f1e20]:
+          - /placeholder: Например, сдать практику 4
+      - generic [ref=f1e21]:
+        - text: Предмет
+        - textbox "Предмет" [ref=f1e22]:
+          - /placeholder: AI-инструменты
+      - generic [ref=f1e23]:
+        - text: Срок
+        - textbox "Срок" [ref=f1e24]
+      - button "Добавить" [ref=f1e25] [cursor=pointer]
+  - generic [ref=f1e26]:
+    - generic [ref=f1e27]:
+      - generic "Фильтры" [ref=f1e28]:
+        - button "Все" [pressed] [ref=f1e29] [cursor=pointer]
+        - button "В работе" [ref=f1e30] [cursor=pointer]
+        - button "Просрочены" [ref=f1e31] [cursor=pointer]
+        - button "Готово" [ref=f1e32] [cursor=pointer]
+      - textbox "Поиск задач" [ref=f1e33]:
+        - /placeholder: Найти задачу…
+    - list "Учебные задачи" [ref=f1e34]:
+      - listitem [ref=f1e35]:
+        - 'checkbox "Выполнено: Проверка Playwright — практика 4" [checked] [ref=f1e36]'
+        - generic [ref=f1e37]:
+          - generic [ref=f1e38]: Проверка Playwright — практика 4
+          - generic [ref=f1e39]:
+            - generic [ref=f1e40]: AI-инструменты
+            - generic [ref=f1e41]: До 1 янв. 2000 г.
+        - 'button "Удалить: Проверка Playwright — практика 4" [ref=f1e42] [cursor=pointer]': Удалить
+  - generic [ref=f1e43]: Хранится на твоём компьютере · Практика 4
