@@ -1,0 +1,318 @@
+SPECIFY_FEATURE_DIRECTORY=specs/001-edit-task bash .specify/scripts/bash/check-prerequisites.sh --json --require-spec --require-tasks --include-tasks
+{"FEATURE_DIR":"/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/specs/001-edit-task","AVAILABLE_DOCS":["research.md","data-model.md","contracts/","quickstart.md","tasks.md"]}
+cd project && python3 -m unittest discover -s tests -v
+test_clear_optional_and_idempotent (test_http.HttpTests.test_clear_optional_and_idempotent) ... 127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_dates (test_http.HttpTests.test_dates) ... 127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_edit_keeps_id_done_and_other_task (test_http.HttpTests.test_edit_keeps_id_done_and_other_task) ... 127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_escaped_unpaired_unicode_surrogates (test_http.HttpTests.test_escaped_unpaired_unicode_surrogates) ... 127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:14] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_exact_keys (test_http.HttpTests.test_exact_keys) ... 127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_json_nesting_limit_is_controlled_error (test_http.HttpTests.test_json_nesting_limit_is_controlled_error) ... /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10547b880>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e84c70>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e84b80>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85300>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85210>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e84a90>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e855d0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e858a0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e854e0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85a80>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85b70>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e857b0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e856c0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85990>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85c60>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85d50>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85e40>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e85f30>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86020>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86110>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86200>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e864d0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e865c0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e866b0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e867a0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e862f0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e863e0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e853f0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86980>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86b60>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86a70>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86d40>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86c50>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86f20>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86e30>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87100>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e86890>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e871f0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e872e0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e873d0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e874c0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e875b0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e876a0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87790>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87880>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87010>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87a60>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87b50>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87c40>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87d30>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87e20>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87f10>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc040>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc130>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc220>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc310>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc400>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc4f0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109e87970>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py:360: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x109edc6d0>
+  obj, end = self.scan_once(s, idx)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+127.0.0.1 - - [28/Oct/2026 22:07:15] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) ... 127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_lengths_and_python_unicode_characters (test_http.HttpTests.test_lengths_and_python_unicode_characters) ... 127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_limits_after_trim (test_http.HttpTests.test_limits_after_trim) ... 127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) ... 127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:17] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_missing_content_length (test_http.HttpTests.test_missing_content_length) ... 127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_non_utf8_json_is_rejected_without_write (test_http.HttpTests.test_non_utf8_json_is_rejected_without_write) ... 127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:18] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) ... 127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/-1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/1.0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/%D9%A1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/9223372036854775808 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/task/1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/1/extra HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/9223372036854775807 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PUT /api/tasks/0001 HTTP/1.1" 200 -
+ok
+test_old_crud_and_sort (test_http.HttpTests.test_old_crud_and_sort) ... 127.0.0.1 - - [28/Oct/2026 22:07:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "DELETE /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "PATCH /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:19] "DELETE /api/tasks/999 HTTP/1.1" 404 -
+ok
+test_sql_and_html_are_data (test_http.HttpTests.test_sql_and_html_are_data) ... 127.0.0.1 - - [28/Oct/2026 22:07:20] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_updated_deadline_changes_server_order (test_http.HttpTests.test_updated_deadline_changes_server_order) ... 127.0.0.1 - - [28/Oct/2026 22:07:20] "PATCH /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:20] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:20] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 22:07:20] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_validation_order (test_http.HttpTests.test_validation_order) ... 127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/999 HTTP/1.1" 400 -
+ok
+test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) ... 127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 22:07:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_cli_database_and_persistence_after_process_restart (test_http.RestartTests.test_cli_database_and_persistence_after_process_restart) ... ok
+test_invalid_days (test_project.DeadlineTests.test_invalid_days) ... ok
+test_missing_database_is_not_created (test_project.DeadlineTests.test_missing_database_is_not_created) ... ok
+test_query_does_not_modify_database (test_project.DeadlineTests.test_query_does_not_modify_database) ... ok
+test_window_excludes_completed_unscheduled_and_later_tasks (test_project.DeadlineTests.test_window_excludes_completed_unscheduled_and_later_tasks) ... ok
+test_zero_includes_today_and_overdue (test_project.DeadlineTests.test_zero_includes_today_and_overdue) ... ok
+test_bad_input (test_project.InputTests.test_bad_input) ... ok
+test_trim_and_validate (test_project.InputTests.test_trim_and_validate) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 9.368s
+
+OK
+python3 scripts/check_js.py
+PASS: inline JavaScript syntax

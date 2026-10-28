@@ -1,0 +1,2 @@
+{"encoding": "utf-16", "expected_status": 400, "expected_unchanged": true, "actual_status": 400, "actual_unchanged": true, "response": {"error": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"}}
+{"encoding": "utf-32", "expected_status": 400, "expected_unchanged": true, "actual_status": 400, "actual_unchanged": true, "response": {"error": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"}}

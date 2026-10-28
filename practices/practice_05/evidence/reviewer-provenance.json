@@ -1,0 +1,39 @@
+{
+  "pre_code_commit": "ca88739c37b72e089eb5f9c5ab13ee6bc86b4bd9",
+  "pre_code_project_files": [],
+  "pre_code_specs": [
+    "practices/practice_05/specs/001-edit-task/checklists/requirements.md",
+    "practices/practice_05/specs/001-edit-task/contracts/api.md",
+    "practices/practice_05/specs/001-edit-task/data-model.md",
+    "practices/practice_05/specs/001-edit-task/logic.md",
+    "practices/practice_05/specs/001-edit-task/plan.md",
+    "practices/practice_05/specs/001-edit-task/quickstart.md",
+    "practices/practice_05/specs/001-edit-task/research.md",
+    "practices/practice_05/specs/001-edit-task/spec.md",
+    "practices/practice_05/specs/001-edit-task/tasks.md",
+    "practices/practice_05/specs/001-edit-task/ui.md",
+    "practices/practice_05/specs/before/logic.md",
+    "practices/practice_05/specs/before/ui.md"
+  ],
+  "prior_practice_diff": [],
+  "pdf_sha256": "bb2e50644e870b7834cfeddfaf9be5365ae6d625572a1a27a9d0f4f90e05a25b",
+  "scaffold_script_matches": {
+    "common.sh": false,
+    "setup-plan.sh": true,
+    "setup-tasks.sh": false,
+    "check-prerequisites.sh": false,
+    "resolve-template.sh": true,
+    "create-new-feature.sh": true
+  },
+  "playwright_installed_version": "1.62.1",
+  "lock_version": "1.62.1",
+  "independent_cli_init_script_matches": {
+    "common.sh": true,
+    "setup-plan.sh": true,
+    "setup-tasks.sh": true,
+    "check-prerequisites.sh": true,
+    "resolve-template.sh": true,
+    "create-new-feature.sh": true
+  },
+  "source_difference_explanation": "Raw source uses generic command names. CLI init adapts messages/format_speckit_command to Codex $speckit-*; independently generated scripts match checked-in scaffold."
+}
