@@ -1,0 +1,13 @@
+node project/tests/e2e.cjs
+PASS: AC1 save/reload/server restart — real UI → PUT → SQLite → fresh process → UI agrees
+PASS: AC3 cancellation — button + Escape sent zero PUTs
+PASS: AC2 server validation in UI — blank title rejected visibly without write
+PASS: AC2 Unicode boundary and clear — emoji boundary persisted, optional fields cleared
+PASS: AC3 network failure — injected PUT abort; draft retained, cancel works
+PASS: AC3 saving lock — delayed PUT, blocked Escape and second submit
+PASS: AC3 PUT success + GET failure — real PUT committed; injected GET 503; confirmed local data retained
+PASS: AC4 filter/search/focus — done filter and query unchanged, edited row disappeared with correct focus
+PASS: AC4/AC5 old done and safe text — no img/script execution; checkbox roundtrip persisted
+PASS: AC5 keyboard/mobile — 8 Tab transitions inside dialog, desktop+mobile screenshots saved
+PASS: AC3 missing task — concurrent DELETE then PUT returned 404; empty DB confirmed
+PASS: AC4 create/delete regression — confirmation accepted, empty temporary DB; zero page errors

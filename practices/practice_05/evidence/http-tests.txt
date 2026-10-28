@@ -1,0 +1,350 @@
+test_clear_optional_and_idempotent (test_http.HttpTests.test_clear_optional_and_idempotent) ... 127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_dates (test_http.HttpTests.test_dates) ... 127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:09] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_edit_keeps_id_done_and_other_task (test_http.HttpTests.test_edit_keeps_id_done_and_other_task) ... 127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_exact_keys (test_http.HttpTests.test_exact_keys) ... 127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:10] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) ... 127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_lengths_and_python_unicode_characters (test_http.HttpTests.test_lengths_and_python_unicode_characters) ... 127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:11] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_limits_after_trim (test_http.HttpTests.test_limits_after_trim) ... 127.0.0.1 - - [28/Oct/2026 21:58:12] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10106f880>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac0b80>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac0a90>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1210>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1120>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10106f1f0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac14e0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac17b0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac13f0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1990>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1a80>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac15d0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac16c0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac18a0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1b70>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1c60>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1d50>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1e40>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1f30>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2020>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2110>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac23e0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac24d0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac25c0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac26b0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2200>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac22f0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac1300>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2890>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2a70>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2980>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2c50>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2b60>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2e30>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2d40>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3010>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac27a0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3100>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac31f0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac32e0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac33d0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac34c0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac35b0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac36a0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3790>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3880>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3970>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3a60>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3b50>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac2f20>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3d30>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3e20>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3f10>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20040>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20130>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20220>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20310>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20400>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b205e0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac3c40>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b207c0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b206d0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b208b0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b209a0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20a90>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105ac0400>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20d60>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20b80>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20e50>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b21030>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b20f40>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b21120>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b21210>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b21300>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b213f0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b215d0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py:706: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105b214e0>
+  def readinto(self, b):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_missing_content_length (test_http.HttpTests.test_missing_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:58:13] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) ... 127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/-1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/1.0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/%D9%A1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/9223372036854775808 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/task/1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/1/extra HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/9223372036854775807 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PUT /api/tasks/0001 HTTP/1.1" 200 -
+ok
+test_old_crud_and_sort (test_http.HttpTests.test_old_crud_and_sort) ... 127.0.0.1 - - [28/Oct/2026 21:58:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "DELETE /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "PATCH /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:14] "DELETE /api/tasks/999 HTTP/1.1" 404 -
+ok
+test_sql_and_html_are_data (test_http.HttpTests.test_sql_and_html_are_data) ... 127.0.0.1 - - [28/Oct/2026 21:58:15] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_updated_deadline_changes_server_order (test_http.HttpTests.test_updated_deadline_changes_server_order) ... 127.0.0.1 - - [28/Oct/2026 21:58:15] "PATCH /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:15] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:15] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:58:15] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_validation_order (test_http.HttpTests.test_validation_order) ... 127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/999 HTTP/1.1" 400 -
+ok
+test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) ... 127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:58:16] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_cli_database_and_persistence_after_process_restart (test_http.RestartTests.test_cli_database_and_persistence_after_process_restart) ... ok
+test_invalid_days (test_project.DeadlineTests.test_invalid_days) ... ok
+test_missing_database_is_not_created (test_project.DeadlineTests.test_missing_database_is_not_created) ... ok
+test_query_does_not_modify_database (test_project.DeadlineTests.test_query_does_not_modify_database) ... ok
+test_window_excludes_completed_unscheduled_and_later_tasks (test_project.DeadlineTests.test_window_excludes_completed_unscheduled_and_later_tasks) ... ok
+test_zero_includes_today_and_overdue (test_project.DeadlineTests.test_zero_includes_today_and_overdue) ... ok
+test_bad_input (test_project.InputTests.test_bad_input) ... ok
+test_trim_and_validate (test_project.InputTests.test_trim_and_validate) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 7.802s
+
+OK

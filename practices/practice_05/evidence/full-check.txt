@@ -1,0 +1,365 @@
+cd project && python3 -m unittest discover -s tests -v
+test_clear_optional_and_idempotent (test_http.HttpTests.test_clear_optional_and_idempotent) ... 127.0.0.1 - - [28/Oct/2026 21:59:18] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:18] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_dates (test_http.HttpTests.test_dates) ... 127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_edit_keeps_id_done_and_other_task (test_http.HttpTests.test_edit_keeps_id_done_and_other_task) ... 127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "PUT /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:19] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_exact_keys (test_http.HttpTests.test_exact_keys) ... 127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) ... 127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:20] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_lengths_and_python_unicode_characters (test_http.HttpTests.test_lengths_and_python_unicode_characters) ... 127.0.0.1 - - [28/Oct/2026 21:59:21] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:21] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_limits_after_trim (test_http.HttpTests.test_limits_after_trim) ... 127.0.0.1 - - [28/Oct/2026 21:59:21] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105d53880>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fecc70>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fecb80>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed300>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed210>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105d53970>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed5d0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed8a0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed4e0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feda80>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fedb70>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed7b0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed6c0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed990>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fedc60>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fedd50>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fede40>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fedf30>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee020>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee110>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee200>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee4d0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee5c0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee6b0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee7a0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee2f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee3e0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fed3f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee980>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feeb60>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feea70>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feed40>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feec50>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feef20>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feee30>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef100>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fee890>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef1f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef2e0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef3d0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef4c0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef5b0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef6a0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef790>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef880>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef970>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fefa60>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fefb50>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fefc40>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fef010>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fefe20>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105feff10>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c040>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c130>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c220>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c310>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c400>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c4f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c6d0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fefd30>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c8b0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c7c0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616c9a0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616ca90>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616cb80>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x105fec4f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616ce50>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616cc70>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616cf40>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d120>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d030>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d210>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d300>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d3f0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d4e0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d5d0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/email/parser.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10616d6c0>
+  feedparser = FeedParser(self._class, policy=self.policy)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_missing_content_length (test_http.HttpTests.test_missing_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:59:22] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) ... 127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/-1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/1.0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/%D9%A1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/9223372036854775808 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/task/1 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/1/extra HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/999 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/9223372036854775807 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PUT /api/tasks/0001 HTTP/1.1" 200 -
+ok
+test_old_crud_and_sort (test_http.HttpTests.test_old_crud_and_sort) ... 127.0.0.1 - - [28/Oct/2026 21:59:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "DELETE /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "PATCH /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:23] "DELETE /api/tasks/999 HTTP/1.1" 404 -
+ok
+test_sql_and_html_are_data (test_http.HttpTests.test_sql_and_html_are_data) ... 127.0.0.1 - - [28/Oct/2026 21:59:24] "PUT /api/tasks/1 HTTP/1.1" 200 -
+ok
+test_updated_deadline_changes_server_order (test_http.HttpTests.test_updated_deadline_changes_server_order) ... 127.0.0.1 - - [28/Oct/2026 21:59:24] "PATCH /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:24] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:24] "PUT /api/tasks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:59:24] "GET /api/tasks HTTP/1.1" 200 -
+ok
+test_validation_order (test_http.HttpTests.test_validation_order) ... 127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/0 HTTP/1.1" 404 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/999 HTTP/1.1" 400 -
+ok
+test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) ... 127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:59:25] "PUT /api/tasks/1 HTTP/1.1" 400 -
+ok
+test_cli_database_and_persistence_after_process_restart (test_http.RestartTests.test_cli_database_and_persistence_after_process_restart) ... ok
+test_invalid_days (test_project.DeadlineTests.test_invalid_days) ... ok
+test_missing_database_is_not_created (test_project.DeadlineTests.test_missing_database_is_not_created) ... ok
+test_query_does_not_modify_database (test_project.DeadlineTests.test_query_does_not_modify_database) ... ok
+test_window_excludes_completed_unscheduled_and_later_tasks (test_project.DeadlineTests.test_window_excludes_completed_unscheduled_and_later_tasks) ... ok
+test_zero_includes_today_and_overdue (test_project.DeadlineTests.test_zero_includes_today_and_overdue) ... ok
+test_bad_input (test_project.InputTests.test_bad_input) ... ok
+test_trim_and_validate (test_project.InputTests.test_trim_and_validate) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 7.888s
+
+OK
+python3 scripts/check_js.py
+PASS: inline JavaScript syntax
+node project/tests/e2e.cjs
+PASS: AC1 save/reload/server restart — real UI → PUT → SQLite → fresh process → UI agrees
+PASS: AC3 cancellation — button + Escape sent zero PUTs
+AssertionError [ERR_ASSERTION]: false == true
+    at /Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/e2e.cjs:85:58 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}
+make: *** [e2e] Error 1
