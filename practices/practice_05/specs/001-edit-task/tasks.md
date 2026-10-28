@@ -20,6 +20,6 @@ Input: spec.md, ui.md, logic.md, plan.md, contracts/api.md.
 - [X] T009 Добавить Makefile/CI, фактические evidence и короткое демо с отдельной базой.
 - [X] T010 Написать README, сравнение OpenSpec, reflection и ПОЯСНЕНИЕ.md.
 - [X] T011 Независимый субагент: повторить тесты и проверить rubric 2+2+5+1, устранить существенные замечания.
-- [ ] T012 Converge по spec/plan/tasks; commit, push, PR с базой main внутри форка.
+- [X] T012 Converge по spec/plan/tasks; commit, push, PR с базой main внутри форка.
 
 Dependencies: T001 → T002 → T003 → T004 → T005/T007 → T008 → T009/T010 → T011 → T012. До T001 код не создаётся. T012 помечается после реального создания PR.
