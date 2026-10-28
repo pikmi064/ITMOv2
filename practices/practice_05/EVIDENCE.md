@@ -20,3 +20,5 @@
 Скриншоты: [desktop dialog](evidence/demo-editor.png), [375px list](evidence/demo-mobile.png), [375px dialog](evidence/demo-mobile-editor.png). Они дополняют проверки поведения. Для интерактивного воспроизведения шагов: `npx playwright show-trace evidence/browser-trace.zip` (trace содержит только синтетические данные тестов).
 
 Неуспешные предварительные команды: sandbox не имел сетевого доступа; установка CLI повторена с разрешённым network вызовом. Первый setup-tasks до spec.md отказал, после создания спецификации повторён успешно. Первый npm lockfile install завис и был остановлен; повтор с ограничением времени завершён. Эти попытки не заявляются успешными проверками.
+
+Независимый финальный контроль: [26 tests](evidence/reviewer-check-after.txt), [12 E2E](evidence/reviewer-e2e-after.txt), [подлинный framework](evidence/reviewer-provenance.json). Замечание: [UTF-16/32 до](evidence/reviewer-encoding-before.txt) → [400 без записи после](evidence/reviewer-encoding-after.txt). У текстовых CLI-логов удалены только концевые пробелы строк для Git hygiene.

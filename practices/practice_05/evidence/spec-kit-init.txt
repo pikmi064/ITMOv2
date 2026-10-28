@@ -1,14 +1,14 @@
-              ███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗   ██╗              
-              ██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝              
-              ███████╗██████╔╝█████╗  ██║     ██║█████╗   ╚████╔╝               
-              ╚════██║██╔═══╝ ██╔══╝  ██║     ██║██╔══╝    ╚██╔╝                
-              ███████║██║     ███████╗╚██████╗██║██║        ██║                 
-              ╚══════╝╚═╝     ╚══════╝ ╚═════╝╚═╝╚═╝        ╚═╝                 
-                                                                                
-               GitHub Spec Kit - Spec-Driven Development Toolkit                
+              ███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗   ██╗
+              ██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝
+              ███████╗██████╔╝█████╗  ██║     ██║█████╗   ╚████╔╝
+              ╚════██║██╔═══╝ ██╔══╝  ██║     ██║██╔══╝    ╚██╔╝
+              ███████║██║     ███████╗╚██████╗██║██║        ██║
+              ╚══════╝╚═╝     ╚══════╝ ╚═════╝╚═╝╚═╝        ╚═╝
+
+               GitHub Spec Kit - Spec-Driven Development Toolkit
 
 Warning: Current directory is not empty (3 items)
-Template files will be merged with existing content and may overwrite existing 
+Template files will be merged with existing content and may overwrite existing
 files
 --force supplied: skipping confirmation and proceeding with merge
 ╭──────────────────────────────────────────────────────────────────────────────╮
