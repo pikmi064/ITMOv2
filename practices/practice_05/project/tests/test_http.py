@@ -134,6 +134,13 @@ class HttpTests(unittest.TestCase):
         raw = json.dumps({"title": "ok", "subject": "", "deadline": ""}).encode()
         self.assertEqual(self.request("PUT", raw=raw + b" " * (8192 - len(raw)))[0], 200)
 
+    def test_non_utf8_json_is_rejected_without_write(self):
+        # json.loads(bytes) auto-detects UTF-16/32; the API requires UTF-8.
+        document = json.dumps(VALID, ensure_ascii=False)
+        for encoding in ("utf-16", "utf-16-le", "utf-16-be", "utf-32", "utf-32-le", "utf-32-be"):
+            with self.subTest(encoding=encoding):
+                self.assert_rejected(raw=document.encode(encoding))
+
     def test_escaped_unpaired_unicode_surrogates(self):
         for key in ("title", "subject"):
             for value in ("\ud800", "\udfff"):

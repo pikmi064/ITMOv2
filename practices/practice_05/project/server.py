@@ -103,7 +103,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get("Transfer-Encoding") is not None:
             raise ValueError("Transfer-Encoding не поддерживается")
         try:
-            return json.loads(self.rfile.read(size))
+            return json.loads(self.rfile.read(size).decode("utf-8"))
         except json.JSONDecodeError:
             raise ValueError("Некорректный JSON") from None
         except RecursionError:
