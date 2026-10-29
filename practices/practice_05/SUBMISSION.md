@@ -2,7 +2,7 @@
 
 - PR: https://github.com/pikmi064/ITMOv2/pull/6
 - Репозиторий: pikmi064/ITMOv2, base main, head codex/practice-05.
-- Материалы: practices/practice_05; начать с ПОЯСНЕНИЕ.md и README.md.
+- Материалы: practices/practice_05; начать с README.md.
 - Порядок: ca88739 — specs до кода; 195fdb8 — реализация; 90f7ef0 — исправление замечания независимого review.
 - Независимая приёмка: REVIEW.md, 26 HTTP/unit + 12 E2E PASS, существенных незакрытых замечаний нет.
 - Живой CI: вкладка Checks в PR. Его статус не дублируется неизменяемым обещанием в этом файле.
