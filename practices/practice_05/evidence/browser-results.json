@@ -1,0 +1,79 @@
+{
+  "command": "make e2e",
+  "browser": "chrome",
+  "temporaryDatabase": true,
+  "records": [
+    {
+      "scenario": "AC1 save/reload/server restart",
+      "expected": "three fields persist; id/done unchanged",
+      "actual": "real UI → PUT → SQLite → fresh process → UI agrees",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC3 cancellation",
+      "expected": "no PUT or database change",
+      "actual": "button + Escape sent zero PUTs",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC2 server validation in UI",
+      "expected": "400 retains draft and old data",
+      "actual": "blank title rejected visibly without write",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC2 Unicode boundary and clear",
+      "expected": "160 code points / 80 subject accepted; empty values clear",
+      "actual": "emoji boundary persisted, optional fields cleared",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC3 network failure",
+      "expected": "draft retained and retry/cancel enabled",
+      "actual": "injected PUT abort; draft retained, cancel works",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC3 saving lock",
+      "expected": "one PUT; no close while pending",
+      "actual": "delayed PUT, blocked Escape and second submit",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC3 PUT success + GET failure",
+      "expected": "saved data visible with distinct refresh warning",
+      "actual": "real PUT committed; injected GET 503; confirmed local data retained",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC4 filter/search/focus",
+      "expected": "selection preserved; hidden row falls back to search",
+      "actual": "done filter and query unchanged, edited row disappeared with correct focus",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC4/AC5 old done and safe text",
+      "expected": "markup inert, PATCH done works both ways",
+      "actual": "no img/script execution; checkbox roundtrip persisted",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC5 keyboard/mobile",
+      "expected": "modal traps Tab, focus restored, width 375px fits",
+      "actual": "8 Tab transitions inside dialog, desktop+mobile screenshots saved",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC3 missing task",
+      "expected": "real 404 retains draft, no recreation",
+      "actual": "concurrent DELETE then PUT returned 404; empty DB confirmed",
+      "status": "PASS"
+    },
+    {
+      "scenario": "AC4 create/delete regression",
+      "expected": "UI create/delete work; no JS errors",
+      "actual": "confirmation accepted, empty temporary DB; zero page errors",
+      "status": "PASS"
+    }
+  ]
+}

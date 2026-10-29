@@ -1,0 +1,2 @@
+{"encoding": "utf-16", "expected_status": 400, "expected_unchanged": true, "actual_status": 200, "actual_unchanged": false, "response": {"id": 1, "title": "Unexpected utf-16", "subject": "", "deadline": "", "done": 0}}
+{"encoding": "utf-32", "expected_status": 400, "expected_unchanged": true, "actual_status": 200, "actual_unchanged": false, "response": {"id": 1, "title": "Unexpected utf-32", "subject": "", "deadline": "", "done": 0}}

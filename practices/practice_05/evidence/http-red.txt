@@ -1,0 +1,1319 @@
+test_clear_optional_and_idempotent (test_http.HttpTests.test_clear_optional_and_idempotent) ... 127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_dates (test_http.HttpTests.test_dates) ... 127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+
+  test_dates (test_http.HttpTests.test_dates) (value='2028-02-29') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='0001-01-01') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='9999-12-31') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2000-01-01') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2026-02-29') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2026-02-30') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='20261028') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2026-1-01') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2026-10-28 ') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value=' 2026-10-28') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='2026-W01-1') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:33] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:33] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_dates (test_http.HttpTests.test_dates) (value='0000-01-01') ... FAIL
+test_edit_keeps_id_done_and_other_task (test_http.HttpTests.test_edit_keeps_id_done_and_other_task) ... 127.0.0.1 - - [28/Oct/2026 21:57:34] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:34] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_exact_keys (test_http.HttpTests.test_exact_keys) ... 127.0.0.1 - - [28/Oct/2026 21:57:34] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:34] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) ... 127.0.0.1 - - [28/Oct/2026 21:57:35] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:35] "PUT /api/tasks/1 HTTP/1.1" 501 -
+
+  test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:35] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:35] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'{') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:35] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:35] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'{"title":"\xff"}') ... FAIL
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10848f010>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c5030>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6020>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c62f0>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c65c0>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6890>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6b60>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7100>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c76a0>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7970>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7c40>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7f10>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c130>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c400>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c5e0>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c8b0>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881cb80>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/traceback.py:863: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881ce50>
+  def increment_until(lineno, col, stop):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+127.0.0.1 - - [28/Oct/2026 21:57:35] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:35] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'                              ') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:35] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:35] "PUT /api/tasks/1 HTTP/1.1" 501 -
+test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) ... FAIL
+test_lengths_and_python_unicode_characters (test_http.HttpTests.test_lengths_and_python_unicode_characters) ... 127.0.0.1 - - [28/Oct/2026 21:57:36] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:36] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_limits_after_trim (test_http.HttpTests.test_limits_after_trim) ... 127.0.0.1 - - [28/Oct/2026 21:57:36] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:36] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='wat') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='-1') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='0') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='8193') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='+50') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='1.0') ... FAIL
+test_missing_content_length (test_http.HttpTests.test_missing_content_length) ... 127.0.0.1 - - [28/Oct/2026 21:57:37] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:37] "PUT /api/tasks/1 HTTP/1.1" 501 -
+ERROR
+test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) ... 127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/0 HTTP/1.1" 501 -
+
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/0') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/-1 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/-1') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/1.0 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/1.0') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/%D9%A1 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/%D9%A1') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/9223372036854775808 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/9223372036854775808') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/99999999999999999999999999999999999999999999999999999999999') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/task/1 HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/task/1') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/1/extra HTTP/1.1" 501 -
+  test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/1/extra') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:38] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PUT /api/tasks/999 HTTP/1.1" 501 -
+test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) ... FAIL
+test_old_crud_and_sort (test_http.HttpTests.test_old_crud_and_sort) ... 127.0.0.1 - - [28/Oct/2026 21:57:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "POST /api/tasks HTTP/1.1" 201 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PATCH /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "DELETE /api/tasks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "POST /api/tasks HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "PATCH /api/tasks/1 HTTP/1.1" 400 -
+127.0.0.1 - - [28/Oct/2026 21:57:38] "DELETE /api/tasks/999 HTTP/1.1" 404 -
+ok
+test_sql_and_html_are_data (test_http.HttpTests.test_sql_and_html_are_data) ... 127.0.0.1 - - [28/Oct/2026 21:57:39] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:39] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_updated_deadline_changes_server_order (test_http.HttpTests.test_updated_deadline_changes_server_order) ... 127.0.0.1 - - [28/Oct/2026 21:57:39] "PATCH /api/tasks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:39] "GET /api/tasks HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 21:57:39] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:39] "PUT /api/tasks/1 HTTP/1.1" 501 -
+FAIL
+test_validation_order (test_http.HttpTests.test_validation_order) ... 127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/0 HTTP/1.1" 501 -
+FAIL
+test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) ... /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7a60>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c7880>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c71f0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6b60>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6890>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c65c0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c62f0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c6020>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c5c60>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c5a80>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c55d0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c53f0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1087c49a0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881cf40>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881cb80>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c8b0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881c400>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881d7b0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881dd50>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881e5c0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881ec50>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881f010>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881f3d0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881fa60>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881fb50>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881fc40>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881fd30>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881fe20>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881ff10>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881f970>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b48130>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881f4c0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10881f790>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b484f0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b485e0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b487c0>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b48a90>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/case.py:420: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x108b48c70>
+  testMethod = getattr(self, methodName)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=[]) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=None) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data='text') ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=1) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=True) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data={}) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data={'title': ' \t\n ', 'subject': ' AI ', 'deadline': '2028-02-29'}) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=None) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=True) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=42) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=[]) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value={}) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=None) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=True) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=42) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=[]) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value={}) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=None) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=True) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=42) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=[]) ... FAIL
+127.0.0.1 - - [28/Oct/2026 21:57:40] code 501, message Unsupported method ('PUT')
+127.0.0.1 - - [28/Oct/2026 21:57:40] "PUT /api/tasks/1 HTTP/1.1" 501 -
+  test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value={}) ... FAIL
+test_cli_database_and_persistence_after_process_restart (test_http.RestartTests.test_cli_database_and_persistence_after_process_restart) ... FAIL
+
+======================================================================
+ERROR: test_missing_content_length (test_http.HttpTests.test_missing_content_length)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 150, in test_missing_content_length
+    body = json.loads(response.read())
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py", line 344, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py", line 362, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+======================================================================
+FAIL: test_clear_optional_and_idempotent (test_http.HttpTests.test_clear_optional_and_idempotent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 84, in test_clear_optional_and_idempotent
+    first = self.request("PUT", data=value)
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2028-02-29')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 109, in test_dates
+    self.assertEqual(self.request("PUT", data={**VALID, "deadline": value})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='0001-01-01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 109, in test_dates
+    self.assertEqual(self.request("PUT", data={**VALID, "deadline": value})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='9999-12-31')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 109, in test_dates
+    self.assertEqual(self.request("PUT", data={**VALID, "deadline": value})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2000-01-01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 109, in test_dates
+    self.assertEqual(self.request("PUT", data={**VALID, "deadline": value})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 109, in test_dates
+    self.assertEqual(self.request("PUT", data={**VALID, "deadline": value})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2026-02-29')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2026-02-30')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='20261028')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2026-1-01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2026-10-28 ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value=' 2026-10-28')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='2026-W01-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_dates (test_http.HttpTests.test_dates) (value='0000-01-01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 112, in test_dates
+    self.assert_rejected({**VALID, "deadline": value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_edit_keeps_id_done_and_other_task (test_http.HttpTests.test_edit_keeps_id_done_and_other_task)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 76, in test_edit_keeps_id_done_and_other_task
+    status, body = self.request("PUT", f"/api/tasks/{task_id}", VALID)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_exact_keys (test_http.HttpTests.test_exact_keys)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 125, in test_exact_keys
+    self.assert_rejected({k: v for k, v in VALID.items() if k != key})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 132, in test_json_utf8_and_size
+    self.assert_rejected(raw=raw)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'{')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 132, in test_json_utf8_and_size
+    self.assert_rejected(raw=raw)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'{"title":"\xff"}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 132, in test_json_utf8_and_size
+    self.assert_rejected(raw=raw)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size) (raw=b'                              ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 132, in test_json_utf8_and_size
+    self.assert_rejected(raw=raw)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_json_utf8_and_size (test_http.HttpTests.test_json_utf8_and_size)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 135, in test_json_utf8_and_size
+    self.assertEqual(self.request("PUT", raw=raw + b" " * (8192 - len(raw)))[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_lengths_and_python_unicode_characters (test_http.HttpTests.test_lengths_and_python_unicode_characters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 94, in test_lengths_and_python_unicode_characters
+    status, body = self.request("PUT", data=value)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_limits_after_trim (test_http.HttpTests.test_limits_after_trim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 102, in test_limits_after_trim
+    status, body = self.request("PUT", data={"title": " " + "x" * 160 + " ", "subject": " " + "y" * 80 + " ", "deadline": ""})
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='wat')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='8193')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='+50')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_malformed_content_length (test_http.HttpTests.test_malformed_content_length) (length='1.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 140, in test_malformed_content_length
+    self.assert_rejected(raw=b"{}", headers={"Content-Length": length})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/1.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/%D9%A1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/9223372036854775808')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/99999999999999999999999999999999999999999999999999999999999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/task/1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries) (path='/api/tasks/1/extra')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 160, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path=path)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_not_found_and_id_boundaries (test_http.HttpTests.test_not_found_and_id_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 162, in test_not_found_and_id_boundaries
+    self.assert_rejected(VALID, status=404, path="/api/tasks/" + value)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_sql_and_html_are_data (test_http.HttpTests.test_sql_and_html_are_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 171, in test_sql_and_html_are_data
+    status, body = self.request("PUT", data={**VALID, "title": title})
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_updated_deadline_changes_server_order (test_http.HttpTests.test_updated_deadline_changes_server_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 194, in test_updated_deadline_changes_server_order
+    self.assertEqual(self.request("PUT", "/api/tasks/1", {**VALID, "deadline": ""})[0], 200)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_validation_order (test_http.HttpTests.test_validation_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 166, in test_validation_order
+    self.assert_rejected({}, status=404, path="/api/tasks/0")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data='text')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (data={'title': ' \t\n ', 'subject': ' AI ', 'deadline': '2028-02-29'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 117, in test_wrong_types_and_blank_title
+    self.assert_rejected(raw=json.dumps(data).encode())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='title', value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='subject', value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=42)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value=[])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_wrong_types_and_blank_title (test_http.HttpTests.test_wrong_types_and_blank_title) (key='deadline', value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 121, in test_wrong_types_and_blank_title
+    self.assert_rejected({**VALID, key: value})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 67, in assert_rejected
+    actual, body = self.request("PUT", path, data, raw=raw, headers=headers)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 56, in request
+    self.assertIn("application/json", content_type or "")
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application/json' not found in 'text/html;charset=utf-8'
+
+======================================================================
+FAIL: test_cli_database_and_persistence_after_process_restart (test_http.RestartTests.test_cli_database_and_persistence_after_process_restart)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 232, in test_cli_database_and_persistence_after_process_restart
+    port = start()
+  File "/Users/danil/.codex/worktrees/practice-05/ITMOv2/practices/practice_05/project/tests/test_http.py", line 210, in start
+    self.assertIn("http://127.0.0.1:", line)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'http://127.0.0.1:' not found in ''
+
+----------------------------------------------------------------------
+Ran 16 tests in 7.884s
+
+FAILED (failures=64, errors=1)
