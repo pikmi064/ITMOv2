@@ -1,0 +1,7 @@
+{
+  "model": "opencode/big-pickle",
+  "error": "timeout 240 seconds; no fabricated decision",
+  "provider_diagnostic": "Free usage limit reached; see ../provider-unavailable/opencode-errors.txt",
+  "model_decision_available": false,
+  "note": "No final model answer; no model decision was submitted to executor in this trial."
+}

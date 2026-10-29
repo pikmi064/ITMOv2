@@ -1,0 +1,875 @@
+test_delete_of_fixture_root_stays_inside_exercise (test_service.SandboxTest.test_delete_of_fixture_root_stays_inside_exercise) ... ok
+test_external_directory_cannot_be_deleted (test_service.SandboxTest.test_external_directory_cannot_be_deleted) ... ok
+test_parent_paths_cannot_escape_exercise (test_service.SandboxTest.test_parent_paths_cannot_escape_exercise) ... ok
+test_symlink_cannot_escape_exercise (test_service.SandboxTest.test_symlink_cannot_escape_exercise) ... ok
+test_assistant_can_return_own_receipt (test_service.ShopTest.test_assistant_can_return_own_receipt) ... ok
+test_customer_can_buy_at_catalog_price (test_service.ShopTest.test_customer_can_buy_at_catalog_price) ... ok
+test_health_and_catalog (test_service.ShopTest.test_health_and_catalog) ... ok
+test_own_profile_and_receipt (test_service.ShopTest.test_own_profile_and_receipt) ... ok
+test_review_can_be_submitted_and_viewed (test_service.ShopTest.test_review_can_be_submitted_and_viewed) ... ok
+test_staff_can_export_with_staff_session (test_service.ShopTest.test_staff_can_export_with_staff_session) ... ok
+test_tokens_identify_distinct_users (test_service.ShopTest.test_tokens_identify_distinct_users) ... ok
+test_unknown_product_rejected (test_service.ShopTest.test_unknown_product_rejected) ... ok
+test_wrong_password_rejected (test_service.ShopTest.test_wrong_password_rejected) ... ok
+test_health_and_not_found (test_http.HttpTest.test_health_and_not_found) ... ok
+test_login_and_purchase_over_http (test_http.HttpTest.test_login_and_purchase_over_http) ... ok
+test_transport_only_binds_loopback (test_http.HttpTest.test_transport_only_binds_loopback) ... ok
+test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) ... 
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/profile', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/profile', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/search', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/search', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/orders', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/orders', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/files', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/files', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/admin/export', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/admin/export', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/debug/logs', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/debug/logs', auth={'X-Token': 'forged'}) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/assistant/context', auth=None) ... FAIL
+  test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/assistant/context', auth={'X-Token': 'forged'}) ... FAIL
+test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) ... FAIL
+test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) ... 
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=-1) ... FAIL
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=0) ... FAIL
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=1) ... FAIL
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price='free') ... FAIL
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=None) ... FAIL
+  test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price={'bad': 1}) ... FAIL
+test_context_owner_minimization_and_untrusted_data (test_security.SecurityHTTPTest.test_context_owner_minimization_and_untrusted_data) ... FAIL
+test_excessive_query_and_nested_json (test_security.SecurityHTTPTest.test_excessive_query_and_nested_json) ... FAIL
+test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) ... 
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'export_profiles', 'arguments': {}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'delete_tree', 'arguments': {'path': '.'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/bob/receipt.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'private/operator-note.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/alice/../../private/operator-note.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'export_profiles', 'arguments': {}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'delete_tree', 'arguments': {'path': '.'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/bob/receipt.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'private/operator-note.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'}) ... FAIL
+  test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/alice/../../private/operator-note.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'}) ... FAIL
+test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) ... FAIL
+test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) ... 
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=bob') ... FAIL
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=../private&path=operator-note.txt') ... FAIL
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=../../private/operator-note.txt') ... FAIL
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=/etc/passwd') ... FAIL
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=../alice/receipt.txt') ... FAIL
+  test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=alice%2F..%2Fbob') ... FAIL
+test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) ... FAIL
+test_login_rate_limit (test_security.SecurityHTTPTest.test_login_rate_limit) ... FAIL
+test_logs_do_not_contain_secrets_or_payloads (test_security.SecurityHTTPTest.test_logs_do_not_contain_secrets_or_payloads) ... FAIL
+test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) ... 
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'[]') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'null') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'1') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'"x"') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{"username":"alice","username":"bob"}') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{"x": NaN}') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'\xff') ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/login', body={'username': []}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/login', body={}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/orders', body={}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/orders', body={'product': []}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'chair', 'text': []}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'bad', 'text': 'x'}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'chair', 'text': ''}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': []}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': {'tool': 'read_file', 'arguments': []}}) ... FAIL
+  test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': {'tool': 'read_file', 'arguments': {}}}) ... FAIL
+test_order_isolation (test_security.SecurityHTTPTest.test_order_isolation) ... FAIL
+test_profile_owner_and_staff (test_security.SecurityHTTPTest.test_profile_owner_and_staff) ... FAIL
+test_query_and_review_limits (test_security.SecurityHTTPTest.test_query_and_review_limits) ... FAIL
+test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) ... 
+  test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: -1\r\n') ... FAIL
+  test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: abc\r\n') ... FAIL
+  test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: 0\r\nContent-Length: 2\r\n') ... FAIL
+  test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Transfer-Encoding: chunked\r\n') ... FAIL
+test_refusal_and_own_receipt (test_security.SecurityHTTPTest.test_refusal_and_own_receipt) ... FAIL
+test_role_header_cannot_grant_or_revoke_access (test_security.SecurityHTTPTest.test_role_header_cannot_grant_or_revoke_access) ... FAIL
+test_session_and_review_storage_limits (test_security.SecurityHTTPTest.test_session_and_review_storage_limits) ... FAIL
+test_session_expiration_and_bounded_audit (test_security.SecurityHTTPTest.test_session_expiration_and_bounded_audit) ... FAIL
+test_sql_injection_profile_search_context (test_security.SecurityHTTPTest.test_sql_injection_profile_search_context) ... FAIL
+test_stored_xss_is_escaped (test_security.SecurityHTTPTest.test_stored_xss_is_escaped) ... FAIL
+test_transport_limits_and_headers (test_security.SecurityHTTPTest.test_transport_limits_and_headers) ... FAIL
+test_unexpected_exception_does_not_leak_details (test_security.SecurityHTTPTest.test_unexpected_exception_does_not_leak_details) ... FAIL
+test_unicode_validation_and_normal_international_text (test_security.SecurityHTTPTest.test_unicode_validation_and_normal_international_text) ... FAIL
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/profile', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/profile', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/search', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/search', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/orders', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/orders', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/files', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/files', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/admin/export', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 403 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/admin/export', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 403 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/debug/logs', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/debug/logs', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/assistant/context', auth=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required) (path='/assistant/context', auth={'X-Token': 'forged'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 52, in test_authentication_required
+    self.assertEqual(self.call('GET', path, auth=auth)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_authentication_required (test_security.SecurityHTTPTest.test_authentication_required)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 54, in test_authentication_required
+    self.assertEqual(self.call('POST', path, body)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 201 != 401
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 78, in test_catalog_controls_price_and_owner
+    self.assertEqual((result['owner'], result['price']), (1, 5000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1, -1) != (1, 5000)
+
+First differing element 1:
+-1
+5000
+
+- (1, -1)
++ (1, 5000)
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 78, in test_catalog_controls_price_and_owner
+    self.assertEqual((result['owner'], result['price']), (1, 5000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1, 0) != (1, 5000)
+
+First differing element 1:
+0
+5000
+
+- (1, 0)
++ (1, 5000)
+?     +++
+
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 78, in test_catalog_controls_price_and_owner
+    self.assertEqual((result['owner'], result['price']), (1, 5000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1, 1) != (1, 5000)
+
+First differing element 1:
+1
+5000
+
+- (1, 1)
++ (1, 5000)
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price='free')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 78, in test_catalog_controls_price_and_owner
+    self.assertEqual((result['owner'], result['price']), (1, 5000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1, 'free') != (1, 5000)
+
+First differing element 1:
+'free'
+5000
+
+- (1, 'free')
++ (1, 5000)
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 78, in test_catalog_controls_price_and_owner
+    self.assertEqual((result['owner'], result['price']), (1, 5000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (1, None) != (1, 5000)
+
+First differing element 1:
+None
+5000
+
+- (1, None)
++ (1, 5000)
+
+======================================================================
+FAIL: test_catalog_controls_price_and_owner (test_security.SecurityHTTPTest.test_catalog_controls_price_and_owner) (price={'bad': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 77, in test_catalog_controls_price_and_owner
+    self.assertEqual(status, 201)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 201
+
+======================================================================
+FAIL: test_context_owner_minimization_and_untrusted_data (test_security.SecurityHTTPTest.test_context_owner_minimization_and_untrusted_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 112, in test_context_owner_minimization_and_untrusted_data
+    self.assertEqual(self.call('GET', '/assistant/context?order_id=2', auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_excessive_query_and_nested_json (test_security.SecurityHTTPTest.test_excessive_query_and_nested_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 199, in test_excessive_query_and_nested_json
+    self.assertEqual(self.call('GET', '/profile?' + query, auth=self.alice)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 400
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'export_profiles', 'arguments': {}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'delete_tree', 'arguments': {'path': '.'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/bob/receipt.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'private/operator-note.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/alice/../../private/operator-note.txt'}}, auth={'X-Token': '2cac24d3f78c4c38a82abbcc7c935938'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'export_profiles', 'arguments': {}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'delete_tree', 'arguments': {'path': '.'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/bob/receipt.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'private/operator-note.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions) (decision={'tool': 'read_file', 'arguments': {'path': 'files/alice/../../private/operator-note.txt'}}, auth={'X-Token': '7a2a1e35e4f444b78eaa92b5758b1aa9'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 133, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': decision}, auth)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_executor_rejects_dangerous_and_cross_owner_decisions (test_security.SecurityHTTPTest.test_executor_rejects_dangerous_and_cross_owner_decisions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 134, in test_executor_rejects_dangerous_and_cross_owner_decisions
+    self.assertTrue(self.shop.sandbox.root.exists())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=bob')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=../private&path=operator-note.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=../../private/operator-note.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=/etc/passwd')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?path=../alice/receipt.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization) (path='/files?user=alice%2F..%2Fbob')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 88, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_files_owner_traversal_absolute_and_normalization (test_security.SecurityHTTPTest.test_files_owner_traversal_absolute_and_normalization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 90, in test_files_owner_traversal_absolute_and_normalization
+    self.assertEqual(self.call('GET', '/files?path=missing', auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 403
+
+======================================================================
+FAIL: test_login_rate_limit (test_security.SecurityHTTPTest.test_login_rate_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 179, in test_login_rate_limit
+    self.assertEqual(self.call('POST', '/login', {'username': 'alice', 'password': 'wrong'})[0], 429)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 429
+
+======================================================================
+FAIL: test_logs_do_not_contain_secrets_or_payloads (test_security.SecurityHTTPTest.test_logs_do_not_contain_secrets_or_payloads)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 104, in test_logs_do_not_contain_secrets_or_payloads
+    self.assertEqual(self.call('GET', '/debug/logs', auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'[]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'null')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'"x"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{"username":"alice","username":"bob"}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'{"x": NaN}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (raw=b'\xff')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 145, in test_malformed_json_schema_and_types
+    self.assertEqual(self.call('POST', '/login', raw=raw)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/login', body={'username': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/login', body={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 401 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/orders', body={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/orders', body={'product': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'chair', 'text': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'bad', 'text': 'x'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/reviews', body={'product': 'chair', 'text': ''})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 201 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': []})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': {'tool': 'read_file', 'arguments': []}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_malformed_json_schema_and_types (test_security.SecurityHTTPTest.test_malformed_json_schema_and_types) (path='/assistant/execute', body={'decision': {'tool': 'read_file', 'arguments': {}}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 150, in test_malformed_json_schema_and_types
+    self.assertEqual(status, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 500 != 400
+
+======================================================================
+FAIL: test_order_isolation (test_security.SecurityHTTPTest.test_order_isolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 69, in test_order_isolation
+    self.assertEqual([x['owner'] for x in self.call('GET', '/orders', auth=self.alice)[1]], [1])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [1, 2] != [1]
+
+First list contains 1 additional elements.
+First extra element 1:
+2
+
+- [1, 2]
++ [1]
+
+======================================================================
+FAIL: test_profile_owner_and_staff (test_security.SecurityHTTPTest.test_profile_owner_and_staff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 57, in test_profile_owner_and_staff
+    self.assertEqual(self.call('GET', '/profile?id=2', auth=self.alice)[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_query_and_review_limits (test_security.SecurityHTTPTest.test_query_and_review_limits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 164, in test_query_and_review_limits
+    self.assertEqual(self.call('GET', query, auth=self.staff)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 400
+
+======================================================================
+FAIL: test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: -1\r\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 195, in test_raw_http_ambiguous_framing
+    self.assertIn(b' 400 ', response.split(b'\r\n')[0])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b' 400 ' not found in b'HTTP/1.0 413 Content Too Large'
+
+======================================================================
+FAIL: test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: abc\r\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 195, in test_raw_http_ambiguous_framing
+    self.assertIn(b' 400 ', response.split(b'\r\n')[0])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b' 400 ' not found in b'HTTP/1.0 500 Internal Server Error'
+
+======================================================================
+FAIL: test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Content-Length: 0\r\nContent-Length: 2\r\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 195, in test_raw_http_ambiguous_framing
+    self.assertIn(b' 400 ', response.split(b'\r\n')[0])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b' 400 ' not found in b'HTTP/1.0 401 Unauthorized'
+
+======================================================================
+FAIL: test_raw_http_ambiguous_framing (test_security.SecurityHTTPTest.test_raw_http_ambiguous_framing) (headers=b'Transfer-Encoding: chunked\r\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 195, in test_raw_http_ambiguous_framing
+    self.assertIn(b' 400 ', response.split(b'\r\n')[0])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b' 400 ' not found in b'HTTP/1.0 401 Unauthorized'
+
+======================================================================
+FAIL: test_refusal_and_own_receipt (test_security.SecurityHTTPTest.test_refusal_and_own_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 138, in test_refusal_and_own_receipt
+    self.assertEqual(self.call('POST', '/assistant/execute', {'decision': {'tool': 'refuse', 'arguments': {'reason': 'unsafe'}}}, self.alice), (200, {'refused': True}))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (400, {'error': 'unknown tool'}) != (200, {'refused': True})
+
+First differing element 0:
+400
+200
+
+- (400, {'error': 'unknown tool'})
++ (200, {'refused': True})
+
+======================================================================
+FAIL: test_role_header_cannot_grant_or_revoke_access (test_security.SecurityHTTPTest.test_role_header_cannot_grant_or_revoke_access)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 81, in test_role_header_cannot_grant_or_revoke_access
+    self.assertEqual(self.call('GET', '/admin/export', auth={**self.alice, 'X-Role': 'staff'})[0], 403)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 403
+
+======================================================================
+FAIL: test_session_and_review_storage_limits (test_security.SecurityHTTPTest.test_session_and_review_storage_limits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 215, in test_session_and_review_storage_limits
+    self.assertEqual(self.call('POST', '/login', {'username': 'alice', 'password': 'learn-alice'})[0], 429)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 429
+
+======================================================================
+FAIL: test_session_expiration_and_bounded_audit (test_security.SecurityHTTPTest.test_session_expiration_and_bounded_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 171, in test_session_expiration_and_bounded_audit
+    self.assertEqual(self.call('GET', '/orders', auth=self.alice)[0], 401)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 401
+
+======================================================================
+FAIL: test_sql_injection_profile_search_context (test_security.SecurityHTTPTest.test_sql_injection_profile_search_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 63, in test_sql_injection_profile_search_context
+    self.assertEqual(self.call('GET', path, auth=self.alice)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 200 != 400
+
+======================================================================
+FAIL: test_stored_xss_is_escaped (test_security.SecurityHTTPTest.test_stored_xss_is_escaped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 97, in test_stored_xss_is_escaped
+    self.assertNotIn('<script>', html)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: '<script>' unexpectedly found in '<html><body><p><script>alert(1)</script><img src=x onerror=alert(2)></p></body></html>'
+
+======================================================================
+FAIL: test_transport_limits_and_headers (test_security.SecurityHTTPTest.test_transport_limits_and_headers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 154, in test_transport_limits_and_headers
+    self.assertEqual(self.call('POST', '/login', raw=b'{}', extra={'Content-Type': 'text/plain'})[0], 415)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 415
+
+======================================================================
+FAIL: test_unexpected_exception_does_not_leak_details (test_security.SecurityHTTPTest.test_unexpected_exception_does_not_leak_details)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 208, in test_unexpected_exception_does_not_leak_details
+    self.assertEqual(self.call('GET', '/health'), (500, {'error': 'internal error'}))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (500, {'error': 'SECRET_PATH_SQL_INTERNAL', 'type': 'RuntimeError'}) != (500, {'error': 'internal error'})
+
+First differing element 1:
+{'error': 'SECRET_PATH_SQL_INTERNAL', 'type': 'RuntimeError'}
+{'error': 'internal error'}
+
+- (500, {'error': 'SECRET_PATH_SQL_INTERNAL', 'type': 'RuntimeError'})
++ (500, {'error': 'internal error'})
+
+======================================================================
+FAIL: test_unicode_validation_and_normal_international_text (test_security.SecurityHTTPTest.test_unicode_validation_and_normal_international_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/lab/test_security.py", line 223, in test_unicode_validation_and_normal_international_text
+    self.assertEqual(self.call('POST', path, body, self.alice)[0], 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 401 != 400
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.975s
+
+FAILED (failures=79)

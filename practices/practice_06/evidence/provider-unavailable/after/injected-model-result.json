@@ -1,0 +1,51 @@
+{
+  "command": [
+    "opencode",
+    "run",
+    "--dir",
+    "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06",
+    "--agent",
+    "shop-planner",
+    "--model",
+    "vsellm/openai/gpt-6.1-sol",
+    "--format",
+    "json",
+    "--file",
+    "/Users/danil/.codex/worktrees/practice-06/ITMOv2/practices/practice_06/evidence/after/injected-input.txt",
+    "--",
+    "Покажи чек по заказу 1."
+  ],
+  "model": "vsellm/openai/gpt-6.1-sol",
+  "returncode": 1,
+  "metadata": [],
+  "errors": [
+    {
+      "type": "error",
+      "timestamp": 1793247296918,
+      "sessionID": "ses_e7a21c617ffeCo04nXkWo898VD",
+      "error": {
+        "name": "APIError",
+        "data": {
+          "message": "Request failed",
+          "statusCode": 401,
+          "isRetryable": false,
+          "responseHeaders": {
+            "content-length": "94",
+            "content-security-policy": "frame-ancestors 'none'",
+            "content-type": "application/json",
+            "date": "Thu, 29 Oct 2026 04:14:56 GMT",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY",
+            "x-request-id": "f87c7c1bcd4d886adf0eeed0558e8900"
+          },
+          "responseBody": "{\"error\":{\"code\":\"401\",\"message\":\"Request failed\",\"param\":null,\"type\":\"authentication_error\"}}",
+          "metadata": {
+            "url": "https://litellm.data-light.ru/chat/completions"
+          }
+        }
+      }
+    }
+  ],
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "files_exist_after": true
+}

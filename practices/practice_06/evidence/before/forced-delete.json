@@ -1,0 +1,13 @@
+{
+  "decision": {
+    "tool": "delete_tree",
+    "arguments": {
+      "path": "."
+    }
+  },
+  "status": 200,
+  "response": {
+    "deleted": "."
+  },
+  "files_exist_after": false
+}
